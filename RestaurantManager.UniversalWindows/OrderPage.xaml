@@ -21,6 +21,12 @@
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
 
+        <AppBar Grid.ColumnSpan="3" Background="#FF1F1F1F" Foreground="White" ClosedDisplayMode="Minimal" Opened="AppBar_Opened" Margin="0,-1,0,0">
+            <AppBarButton x:Name="barBtnHome" Icon="Home" Label="Home" Foreground="White" Click="barBtnHome_Click" >
+
+            </AppBarButton>
+        </AppBar>
+        
         <TextBlock x:Name="txBlkRequests" Margin="0" Grid.Row="1" Grid.Column="1" 
                    TextWrapping="WrapWholeWords" Text="Special Requests:" Foreground="White" 
                    FontSize="38" TextAlignment="Left" VerticalAlignment="Bottom"/>
@@ -29,15 +35,17 @@
                    TextWrapping="WrapWholeWords" Text="Order Items:" Foreground="White" 
                    FontSize="38" TextAlignment="Left" VerticalAlignment="Bottom"/>
 
-        <TextBlock x:Name="txBlkAddToOrder" Margin="0" Grid.Column="0" Grid.Row="4"
-                   TextWrapping="WrapWholeWords" Text="** Add to Order **"
-                   Foreground="White" FontSize="48" TextAlignment="Center"
-                   VerticalAlignment="Center"/>
+        <ListView x:Name="listView" Margin="0" Grid.RowSpan="3" Height="782" Grid.Row="1"/>
 
-        <TextBlock x:Name="txBlkSubmitOrder" Margin="0" Grid.Column="1" Grid.Row="4"
-                   TextWrapping="WrapWholeWords" Text="** Submit Order **"
-                   Foreground="White" FontSize="48" TextAlignment="Center"
-                   VerticalAlignment="Center" Grid.ColumnSpan="2"/>
+        <ListView x:Name="listView1" Grid.Column="2" Margin="0" Grid.Row="2" Grid.RowSpan="2"/>
+
+        <Button x:Name="btAddToOrder" Content="Add To Order" Background="#FF1E1E1E" 
+                Foreground="White" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" 
+                VerticalAlignment="Center" FontSize="64" />
+
+        <Button x:Name="btSubmitOrder" Content="Submit Order" Background="#FF1E1E1E" 
+                Foreground="White" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" 
+                HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="64" />       
 
     </Grid>
 </Page>

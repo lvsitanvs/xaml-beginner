@@ -13,10 +13,19 @@
             <RowDefinition Height="0.1*"/>
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="txBlkClearAll" Margin="0" Grid.Row="1"
-                   TextWrapping="WrapWholeWords" Text="** Clear All Orders **"
-                   Foreground="White" FontSize="48" TextAlignment="Center"
-                   VerticalAlignment="Center" />
+        <AppBar Grid.ColumnSpan="3" Background="#FF1F1F1F" Foreground="White" 
+                ClosedDisplayMode="Minimal" Opened="AppBar_Opened" Margin="0,-1,0,0">
+            <AppBarButton x:Name="barBtnHome" Icon="Home" Label="Home" 
+                          Foreground="White" Click="barBtnHome_Click" >
+
+            </AppBarButton>
+        </AppBar>
+
+        <ListView x:Name="listView" Margin="0" Background="#FF832727" Height="1069" />
+
+        <Button x:Name="btBlkClearAll" Content="Clear All Order"
+                Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" 
+                VerticalAlignment="Center" FontSize="64" />
 
     </Grid>
 </Page>
