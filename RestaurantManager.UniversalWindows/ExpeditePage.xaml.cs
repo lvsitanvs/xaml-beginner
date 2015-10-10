@@ -26,15 +26,10 @@ namespace RestaurantManager.UniversalWindows
         {
             this.InitializeComponent();
         }
-
-        private void barBtnHome_Click(object sender, RoutedEventArgs e)
+      
+        private void Home_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(MainPage));
-        }
-
-        private void AppBar_Opened(object sender, object e)
-        {
-            
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

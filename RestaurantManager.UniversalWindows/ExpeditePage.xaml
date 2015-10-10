@@ -5,27 +5,18 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:RestaurantManager.Models"
     mc:Ignorable="d">
 
     <Grid Background="Black">
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.9*"/>
-            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.9*" />
+            <RowDefinition Height="0.1*" />
         </Grid.RowDefinitions>
-
-        <AppBar Grid.ColumnSpan="3" Background="#FF1F1F1F" Foreground="White" 
-                ClosedDisplayMode="Minimal" Opened="AppBar_Opened" Margin="0,-1,0,0">
-            <AppBarButton x:Name="barBtnHome" Icon="Home" Label="Home" 
-                          Foreground="White" Click="barBtnHome_Click" >
-
-            </AppBarButton>
+        <AppBar Background="#FF292929" Foreground="White">
+            <AppBarButton Label="Home" Icon="Home" Click="Home_Click" Foreground="White"/>
         </AppBar>
-
-        <ListView x:Name="listView" Margin="0" Background="#FF832727" Height="1069" />
-
-        <Button x:Name="btBlkClearAll" Content="Clear All Order"
-                Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" 
-                VerticalAlignment="Center" FontSize="64" />
-
+        <GridView Grid.Row="0" Margin="10" ItemsSource="{Binding Source={StaticResource DataManager},Path=OrderItems}" />
+            <Button Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Content="Clear All Orders" Foreground="White" BorderBrush="Gainsboro" Background="#FF3E3E3E" />
     </Grid>
 </Page>

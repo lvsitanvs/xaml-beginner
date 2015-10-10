@@ -27,14 +27,17 @@ namespace RestaurantManager.UniversalWindows
             this.InitializeComponent();
         }
 
-        private void btGoToOrders_Click(object sender, RoutedEventArgs e)
+        private void Order_Click (object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ExpeditePage));
+            this.Frame.Navigate(typeof(ExpeditePage));
+        }
+        private void Submit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(OrderPage));
         }
 
-        private void btSubmitOrder_Click(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(OrderPage));
-        }
     }
+
+    
+
 }
